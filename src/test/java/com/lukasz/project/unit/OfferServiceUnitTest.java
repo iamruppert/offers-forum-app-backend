@@ -1,4 +1,4 @@
-package com.lukasz.project.service;
+package com.lukasz.project.unit;
 
 import com.lukasz.project.database.auth.Extractor;
 import com.lukasz.project.dto.OfferRequest;
@@ -7,13 +7,16 @@ import com.lukasz.project.model.Recruiter;
 import com.lukasz.project.model.User;
 import com.lukasz.project.repository.OfferRepository;
 import com.lukasz.project.repository.UserRepository;
+import com.lukasz.project.service.OfferServiceImpl;
 import com.lukasz.project.validator.MyValidationException;
 import com.lukasz.project.validator.ObjectValidatorImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -23,6 +26,7 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+@ExtendWith(MockitoExtension.class)
 class OfferServiceUnitTest {
 
     @Mock

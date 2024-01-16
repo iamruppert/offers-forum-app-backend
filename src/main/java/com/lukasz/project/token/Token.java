@@ -36,4 +36,9 @@ public class Token {
     @JoinColumn(name = "user_id")
     private User user;
 
+    public Token(String validJwtToken, boolean expired, boolean revoked) {
+        this.token = validJwtToken;
+        this.expired = expired;
+        this.revoked = revoked;
+    }
 }

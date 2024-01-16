@@ -1,4 +1,4 @@
-package com.lukasz.project.service;
+package com.lukasz.project.integration;
 
 import com.lukasz.project.dto.OfferRequest;
 import com.lukasz.project.model.Currency;
@@ -7,6 +7,7 @@ import com.lukasz.project.model.Recruiter;
 import com.lukasz.project.model.User;
 import com.lukasz.project.repository.OfferRepository;
 import com.lukasz.project.repository.UserRepository;
+import com.lukasz.project.service.OfferServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

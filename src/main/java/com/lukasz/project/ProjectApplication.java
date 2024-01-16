@@ -1,17 +1,8 @@
 package com.lukasz.project;
 
-import com.lukasz.project.database.auth.AuthenticationService;
-import com.lukasz.project.database.auth.RegisterRequest;
-import com.lukasz.project.dto.OfferRequest;
-import com.lukasz.project.model.Currency;
-import com.lukasz.project.service.OfferServiceImpl;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 import org.springframework.validation.annotation.Validated;
-
-import java.util.Set;
 
 @SpringBootApplication
 @Validated
@@ -20,7 +11,7 @@ public class ProjectApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ProjectApplication.class, args);
 	}
-
+/*
 	@Bean
 	public CommandLineRunner commandLineRunner(
 			AuthenticationService service,
@@ -118,6 +109,6 @@ public class ProjectApplication {
 
 		};
 	}
-
+*/
 
 }

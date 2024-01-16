@@ -43,7 +43,7 @@ public class AuthenticationService {
             Map<String, Object> additionalClaims = new HashMap<>();
             additionalClaims.put("role", "REGISTERED_USER");
 
-            var jwtToken = jwtService.generateToken(additionalClaims,user);
+            var jwtToken = jwtService.generateToken(additionalClaims, user);
             saveUserToken(save, jwtToken);
             return AuthenticationResponse.builder()
                     .token(jwtToken)
@@ -60,7 +60,7 @@ public class AuthenticationService {
             Admin save = userRepository.save(admin);
             Map<String, Object> additionalClaims = new HashMap<>();
             additionalClaims.put("role", "REGISTERED_USER");
-            var jwtToken = jwtService.generateToken(additionalClaims,admin);
+            var jwtToken = jwtService.generateToken(additionalClaims, admin);
             saveUserToken(save, jwtToken);
             return AuthenticationResponse.builder()
                     .token(jwtToken)
@@ -72,21 +72,22 @@ public class AuthenticationService {
 
     public AuthenticationResponse registerRecruiter(RegisterRequest request) {
         Set<String> violations = validator.validate(request);
-            if (!violations.isEmpty()) {
-                throw new MyValidationException(violations);
-            }
+        if (!violations.isEmpty()) {
+            throw new MyValidationException(violations);
+        }
 
-            Recruiter newRecruiter = extractor.createActorFromRequest(request, Recruiter.class);
-            newRecruiter.setRole(RECRUITER);
-            Recruiter save = userRepository.save(newRecruiter);
+        Recruiter newRecruiter = extractor.createActorFromRequest(request, Recruiter.class);
+        newRecruiter.setRole(RECRUITER);
+        Recruiter save = userRepository.save(newRecruiter);
         Map<String, Object> additionalClaims = new HashMap<>();
         additionalClaims.put("role", "REGISTERED_USER");
-            var jwtToken = jwtService.generateToken(additionalClaims,newRecruiter);
-            saveUserToken(save, jwtToken);
-            return AuthenticationResponse.builder()
-                    .token(jwtToken)
-                    .build();
+        var jwtToken = jwtService.generateToken(additionalClaims, newRecruiter);
+        saveUserToken(save, jwtToken);
+        return AuthenticationResponse.builder()
+                .token(jwtToken)
+                .build();
     }
+
     public AuthenticationResponse authenticate(AuthenticationRequest request) {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
@@ -100,7 +101,7 @@ public class AuthenticationService {
         Map<String, Object> additionalClaims = new HashMap<>();
         additionalClaims.put("role", user.getRole());
 
-        var jwtToken = jwtService.generateToken(additionalClaims,user);
+        var jwtToken = jwtService.generateToken(additionalClaims, user);
         revokeAllUsersTokens(user);
         saveUserToken(user, jwtToken);
         return AuthenticationResponse.builder()

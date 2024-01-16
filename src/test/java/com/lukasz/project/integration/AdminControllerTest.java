@@ -1,4 +1,4 @@
-package com.lukasz.project.controller;
+package com.lukasz.project.integration;
 
 import com.lukasz.project.database.auth.AuthenticationService;
 import com.lukasz.project.database.auth.RegisterRequest;
