@@ -46,7 +46,7 @@ Spring Boot 3, Gradle, PostgreSQL, JUnit5, TestContainers, JWT
 ## API Reference
 
 Application publishes Swagger API documentation. Some of the endpoints are shown below.
-After running the app the Swagger documentation is under : http://localhost:8190/app/swagger-ui/index.html
+After running the app the Swagger documentation is under : http://localhost:8080/swagger-ui/index.html
 
 #### adding offer to favourites
 
