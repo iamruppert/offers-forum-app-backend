@@ -50,7 +50,7 @@ After running the app the Swagger documentation is under : http://localhost:8190
 
 #### adding offer to favourites
 
-```http
+```
   POST /api/registeredUser/addToFavourite/{offerId}
 ```
 
@@ -60,12 +60,12 @@ After running the app the Swagger documentation is under : http://localhost:8190
 
 #### getting all offers
 
-```http
+```
   GET /api/listAllOffers
 ```
 #### adding offer to favourites
 
-```http
+```
   POST /api/auth/register
 ```
 | Parameter  | Schema                                                |
