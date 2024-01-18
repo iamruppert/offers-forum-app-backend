@@ -40,7 +40,7 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(req ->
                         req.requestMatchers("api/auth/register")
                                 .permitAll()
-                                .requestMatchers("api/**")
+                                .requestMatchers("/v3/api-docs/**", "/swagger-ui/**")
                                 .permitAll()
                                 .requestMatchers("api/auth/authenticate")
                                 .permitAll()

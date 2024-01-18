@@ -1,3 +1,7 @@
+server:
+  port: 8190
+  servlet:
+    context-path: /app
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/git_project
