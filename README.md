@@ -1,8 +1,8 @@
 
 # Offer forum app
 
-The application is aimed at jobseekers. The application is based on the following user roles: normal user, administrator and recruiter. 
-
+The application is aimed at jobseekers. The application is based on the following user roles: normal user, administrator and recruiter. </br>
+Frontend : https://github.com/iamruppert/offers-forum-app-front
 
 
 ## Authors
